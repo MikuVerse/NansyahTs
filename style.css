@@ -82,10 +82,6 @@ body {
   }
 }
 
-.nav-left {
-  display: flex;
-  gap: 1rem;
-}
 
 .navbar .btn {
   background-color: white;
@@ -99,22 +95,9 @@ body {
 
 .navbar .btn:hover {
   background-color: #00a5b5;
-  color: white;
+  color: #333;
 }
 
-.nav-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-
-
-.brand-title {
-  color: white;
-  font-size: 24px;
-  font-weight: 800;
-  font-family: 'Trebuchet MS', sans-serif;
-}
 
 /* Hero Section */
 .hero {
@@ -147,7 +130,7 @@ body {
 
 .hero .btn:hover {
   background: #ffe600;
-  color: #333;
+  color: white;
 }
 
 /* Sections */
