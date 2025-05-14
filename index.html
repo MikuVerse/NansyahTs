@@ -1,51 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hatsune Miku Fan Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MikuVerse</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <h1>Hatsune Miku Fan Page</h1>
-    </header>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">MikuVerse</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#songs">Top Songs</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#fanart">Fan Art</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <nav>
-        <ul>
-            <li><a href="#debut">Debut</a></li>
-            <li><a href="#hits">Top Hits</a></li>
-            <li><a href="#puncak">Puncak Popularitas</a></li>
-        </ul>
-    </nav>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to MikuVerse</h1>
+    <p>The Virtual Diva Who Changed the World</p>
+    <a href="#about" class="btn">Learn More</a>
+  </header>
 
-    <section id="debut" data-aos="fade-up">
-        <h2>Hatsune Miku Debut</h2>
-        <p>Hatsune Miku pertama kali debut pada tahun 2007 sebagai software vokal Synthesizer yang dikembangkan oleh Crypton Future Media. Miku adalah salah satu Vocaloid yang paling populer di dunia.</p>
-    </section>
+  <!-- About -->
+  <section id="about">
+    <h2>About Hatsune Miku</h2>
+    <p>Hatsune Miku adalah penyanyi virtual berbasis Vocaloid dari Crypton Future Media. Dengan suara unik dan gaya futuristik, ia telah jadi ikon global dan inspirasi jutaan orang.</p>
+  </section>
 
-    <section id="hits" data-aos="fade-up">
-        <h2>Top Hits</h2>
-        <ul>
-            <li>1. "World is Mine"</li>
-            <li>2. "Senbonzakura"</li>
-            <li>3. "Miku"</li>
-        </ul>
-        <button id="showMoreBtn">Show More</button>
-        <div id="extraInfo" style="display:none;">
-            <p>Additional information about Hatsune Miku's top hits...</p>
-        </div>
-    </section>
+  <!-- Top Songs -->
+  <section id="songs">
+    <h2>Top Songs</h2>
+    <ul>
+      <li>World is Mine</li>
+      <li>Senbonzakura</li>
+      <li>Tell Your World</li>
+      <li>Rolling Girl</li>
+      <li>PoPiPo</li>
+    </ul>
+  </section>
 
-    <section id="puncak" data-aos="fade-up">
-        <h2 id="movingText">Puncak Popularitas Hatsune Miku</h2>
-        <p>Hatsune Miku mencapai puncaknya pada tahun 2010, menjadi ikon budaya pop Jepang, dengan berbagai konser dan kolaborasi besar yang melibatkan teknologi hologram dan media sosial.</p>
-    </section>
+  <!-- Media -->
+  <section id="media">
+    <h2>Media</h2>
+    <p>Cuplikan konser, trailer kolaborasi, dan video musik terbaik Miku!</p>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/MhHX0nr5b8U" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <!-- Fan Art -->
+  <section id="fanart">
+    <h2>Fan Art Gallery</h2>
+    <div class="gallery">
+      <img src="fanart1.jpg" alt="Fan Art 1" />
+      <img src="fanart2.jpg" alt="Fan Art 2" />
+      <img src="fanart3.jpg" alt="Fan Art 3" />
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact & Social</h2>
+    <ul>
+      <li><a href="https://instagram.com/yourusername">Instagram</a></li>
+      <li><a href="https://twitter.com/yourusername">Twitter/X</a></li>
+      <li><a href="mailto:youremail@example.com">Email</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MikuVerse by Nansyah</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
