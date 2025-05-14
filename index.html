@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Hatsune Miku</title>
-  <link rel="stylesheet" href="style.css"> <!-- Menghubungkan file CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hatsune Miku Fan Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Menu Hamburger -->
-  <div class="menu-container">
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-    </div>
-    <!-- Dropdown Menu -->
-    <div class="dropdown-menu" id="menu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- Gambar Miku -->
-  <img src="images/miku.jpg" alt="Hatsune Miku" id="mikuImage">
-  
-  <div class="music-box">
-  <h3>Now Playing:</h3>
-  <iframe style="border-radius:12px" 
-      src="https://open.spotify.com/embed/track/75ppsVV4CezCovCht9mfbT?si=upTEcttZRkeQ0JyUiG92_g" 
-      width="100%" height="80" frameBorder="0" 
-      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-      loading="lazy">
-  </iframe>
-</div>
+    <header>
+        <h1>Hatsune Miku Fan Page</h1>
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="#debut">Debut</a></li>
+            <li><a href="#hits">Top Hits</a></li>
+            <li><a href="#puncak">Puncak Popularitas</a></li>
+        </ul>
+    </nav>
 
-  <script src="script.js"></script> <!-- Menghubungkan file JavaScript -->
+    <section id="debut" data-aos="fade-up">
+        <h2>Hatsune Miku Debut</h2>
+        <p>Hatsune Miku pertama kali debut pada tahun 2007 sebagai software vokal Synthesizer yang dikembangkan oleh Crypton Future Media. Miku adalah salah satu Vocaloid yang paling populer di dunia.</p>
+    </section>
+
+    <section id="hits" data-aos="fade-up">
+        <h2>Top Hits</h2>
+        <ul>
+            <li>1. "World is Mine"</li>
+            <li>2. "Senbonzakura"</li>
+            <li>3. "Miku"</li>
+        </ul>
+        <button id="showMoreBtn">Show More</button>
+        <div id="extraInfo" style="display:none;">
+            <p>Additional information about Hatsune Miku's top hits...</p>
+        </div>
+    </section>
+
+    <section id="puncak" data-aos="fade-up">
+        <h2 id="movingText">Puncak Popularitas Hatsune Miku</h2>
+        <p>Hatsune Miku mencapai puncaknya pada tahun 2010, menjadi ikon budaya pop Jepang, dengan berbagai konser dan kolaborasi besar yang melibatkan teknologi hologram dan media sosial.</p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
