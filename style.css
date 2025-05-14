@@ -19,6 +19,7 @@ body {
   cursor: pointer;
   padding: 10px;
   z-index: 999;
+  color: white;
 }
 
 .menu {
