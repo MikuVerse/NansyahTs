@@ -15,12 +15,18 @@ body {
 
 /* Toolbar */
 .toolbar {
-  background-color: #333;
+  background-color: #333; /* Toolbar Background */
   color: white;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000; /* Toolbar on top */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better separation */
 }
 
 #toggleNav {
@@ -36,48 +42,12 @@ body {
   background-color: #555;
 }
 
-/* Navigation Menu */
-.nav-menu {
-  display: none;
-  background-color: #111;
-  position: absolute;
-  top: 50px;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  padding: 15px;
-  transition: all 0.3s ease;
-}
-
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.nav-menu ul li {
-  margin: 10px 0;
-}
-
-.nav-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.nav-menu ul li a:hover {
-  color: #ff6600; /* Hover effect */
-}
-
-/* Show the menu when active */
-.nav-menu.show {
-  left: 0;
-}
-
 /* Hero Section */
 .hero {
   background: linear-gradient(to bottom, #00c2cb, #d9faff);
   text-align: center;
   padding: 4rem 1rem;
+  margin-top: 60px;  /* Adjusting Hero Section to make space for the fixed toolbar */
 }
 
 .hero h1 {
@@ -97,6 +67,42 @@ body {
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: none;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  padding: 15px;
+  transition: left 0.3s ease-in-out;
+}
+
+.nav-menu.show {
+  left: 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  margin: 10px 0;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-menu ul li a:hover {
+  color: #ff6600;
 }
 
 /* Section Styling */
@@ -150,16 +156,4 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .toolbar {
-    padding: 15px;
-  }
-
-  #toggleNav {
-    font-size: 16px;
-    padding: 8px;
-  }
 }
