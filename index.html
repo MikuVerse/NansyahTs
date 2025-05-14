@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Hatsune Miku</title>
+  <link rel="stylesheet" href="style.css"> <!-- Menghubungkan file CSS -->
+</head>
+<body>
+  <!-- Menu Hamburger -->
+  <div class="menu-container">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Gambar Miku -->
+  <img src="images/miku.jpg" alt="Hatsune Miku" id="mikuImage">
+  
+  <div class="music-box">
+  <h3>Now Playing:</h3>
+  <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/75ppsVV4CezCovCht9mfbT?si=upTEcttZRkeQ0JyUiG92_g" 
+      width="100%" height="80" frameBorder="0" 
+      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+  </iframe>
+</div>
+
+
+  <script src="script.js"></script> <!-- Menghubungkan file JavaScript -->
+</body>
+</html>
