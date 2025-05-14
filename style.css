@@ -13,28 +13,41 @@ body {
 }
 
 /* Navigation Bar */
-.nav-bar {
+.navbar {
+  background: linear-gradient(to bottom, #00c2cb, #d9faff);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #00bcd4; /* mirip Hero Section */
-  padding: 12px 24px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
-.nav-links a {
-  color: white;
+.nav-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .btn {
+  background-color: white;
+  color: #00c2cb;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
   text-decoration: none;
-  margin: 0 16px;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #ffe600; /* efek hover kek konser glowstick */
+.navbar .btn:hover {
+  background-color: #00a5b5;
+  color: white;
 }
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
 
 .brand-title {
   color: white;
