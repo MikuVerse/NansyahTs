@@ -149,3 +149,26 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+@media (min-width: 769px) {
+  .nav-menu {
+    display: block !important;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+  }
+
+  .nav-menu ul li {
+    margin: 0;
+  }
+
+  #toggleNav {
+    display: none;
+  }
+}
