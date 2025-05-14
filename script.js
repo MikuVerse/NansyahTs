@@ -1,7 +1,13 @@
-// Toggle Navigation Menu
-const toggleNav = document.getElementById('toggleNav');
-const navMenu = document.getElementById('navMenu');
-
-toggleNav.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
+// Smooth scroll untuk anchor link
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
 });
