@@ -31,10 +31,11 @@ body {
 
 .nav-button {
   background-color: white;
+  display: inline-block;
   color: #00BCD4;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: 0.3s ease;
