@@ -14,82 +14,12 @@ body {
 
 /* Navigation Bar */
 .navbar {
-  background-color: #00c2cb;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  flex-wrap: wrap; /* Membolehkan elemen navbar untuk wrap jika diperlukan */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar h1 {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0;
-  order: 2;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  order: 1;
-  flex-wrap: wrap; /* Membuat link bisa melipat saat layar kecil */
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  background-color: #ffffff33;
-  transition: background 0.3s;
-  white-space: nowrap; /* Menghindari pemotongan teks di mobile */
-}
-
-.nav-links a:hover {
-  background-color: #ffffff55;
-}
-
-/* Responsif untuk Mobile */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem; /* Tambahkan jarak antar elemen */
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 1rem; /* Jarak antar link */
-  }
-
-  .nav-links a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0; /* Sesuaikan padding untuk mobile */
-    font-size: 1rem; /* Ukuran font lebih kecil */
-  }
-
-  .navbar h1 {
-    order: 1;
-  }
-
-  .nav-links {
-    order: 2;
-  }
-}
-
-.navbar {
   background-color: #00BCD4;
   padding: 10px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-left {
@@ -113,6 +43,19 @@ body {
 .nav-button:hover {
   background-color: #0097A7;
   color: white;
+}
+
+/* Responsif biar mobile friendly */
+@media (max-width: 768px) {
+  .nav-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-button {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 /* Hero Section */
