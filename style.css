@@ -49,12 +49,12 @@ body {
 /* Responsif biar mobile friendly */
 @media (max-width: 768px) {
   .nav-left {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
   .nav-button {
-    width: 15%;
+    width: 25%;
     text-align: center;
   }
 }
