@@ -6,3 +6,11 @@ document.querySelectorAll('nav a').forEach(link => {
     section.scrollIntoView({ behavior: 'smooth' });
   });
 });
+// Ambil elemen tombol dan menu
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+
+// Toggle menu saat tombol hamburger diklik
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
