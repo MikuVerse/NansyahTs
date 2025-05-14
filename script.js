@@ -1,11 +1,34 @@
-// Fungsi untuk menampilkan/menghilangkan dropdown menu dan mengubah tampilan hamburger
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  const hamburger = document.getElementById("hamburger");
+AOS.init();  // Inisialisasi AOS
 
-  // Toggle tampilan menu
-  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+// Smooth Scroll
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
 
-  // Animasi hamburger: buka/tutup dengan efek rotasi
-  hamburger.classList.toggle("open");
-}
+// Show More Button
+document.getElementById('showMoreBtn').addEventListener('click', function() {
+    var extraInfo = document.getElementById('extraInfo');
+    if (extraInfo.style.display === 'none') {
+        extraInfo.style.display = 'block';
+        this.innerText = 'Show Less';
+    } else {
+        extraInfo.style.display = 'none';
+        this.innerText = 'Show More';
+    }
+});
+
+// Animasi Teks Bergerak
+window.addEventListener('scroll', function() {
+    const text = document.getElementById('movingText');
+    if (window.scrollY > 100) {
+        text.style.transform = 'translateX(100px)';
+    } else {
+        text.style.transform = 'translateX(0)';
+    }
+});
