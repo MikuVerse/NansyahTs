@@ -13,65 +13,62 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Tombol Hamburger */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
+/* Toolbar */
+.toolbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
   justify-content: space-between;
-  width: 30px;
-  height: 20px;
+  align-items: center;
+}
+
+#toggleNav {
+  background-color: #444;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
   cursor: pointer;
 }
 
-.menu-toggle .bar {
-  width: 100%;
-  height: 4px;
-  background-color: white;
-  border-radius: 10px;
+#toggleNav:hover {
+  background-color: #555;
 }
 
-/* Menu Hamburger */
-.menu {
+/* Navigation Menu */
+.nav-menu {
   display: none;
-  flex-direction: column;
   background-color: #111;
   position: absolute;
-  top: 60px;
-  right: 10px;
+  top: 50px;
+  left: 0;
+  width: 100%;
   padding: 15px;
-  border-radius: 8px;
-  width: 200px;
 }
 
-.menu.show {
-  display: flex;
-}
-
-.menu ul {
+.nav-menu ul {
   list-style: none;
   padding: 0;
 }
 
-.menu ul li {
+.nav-menu ul li {
   margin: 10px 0;
 }
 
-.menu ul li a {
+.nav-menu ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s;
 }
 
-.menu ul li a:hover {
-  color: #ff6600; /* Efek hover */
+.nav-menu ul li a:hover {
+  color: #ff6600; /* Hover effect */
 }
 
-/* Responsif untuk tampilan kecil */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
+/* Show the menu when active */
+.nav-menu.show {
+  display: block;
 }
 
 /* Hero Section */
