@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset dasar */
 * {
   margin: 0;
   padding: 0;
@@ -6,154 +6,125 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0faff;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  background-color: #f2f9ff;
+  color: #333;
 }
 
-/* Toolbar */
-.toolbar {
-  background-color: #333; /* Toolbar Background */
-  color: white;
-  padding: 10px;
+/* Navigation Bar */
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000; /* Toolbar on top */
-  position: fixed;
-  width: 100%;
+  background-color: #00bcd4; /* mirip Hero Section */
+  padding: 12px 24px;
+  position: sticky;
   top: 0;
-  left: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better separation */
+  z-index: 1000;
 }
 
-#toggleNav {
-  background-color: #444;
+.nav-links a {
   color: white;
-  border: none;
-  font-size: 18px;
-  padding: 10px;
-  cursor: pointer;
+  text-decoration: none;
+  margin: 0 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-#toggleNav:hover {
-  background-color: #555;
+.nav-links a:hover {
+  color: #ffe600; /* efek hover kek konser glowstick */
+}
+
+.brand-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to bottom, #00c2cb, #d9faff);
+  background: linear-gradient(to right, #00bcd4, #0097a7);
+  color: white;
   text-align: center;
-  padding: 4rem 1rem;
-  margin-top: 60px;  /* Adjusting Hero Section to make space for the fixed toolbar */
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  color: #fff;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
 .hero p {
-  margin: 1rem 0;
-  font-size: 1.1rem;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .hero .btn {
-  background-color: white;
-  color: #00c2cb;
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
-  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: #00bcd4;
   font-weight: bold;
-}
-
-/* Navigation Menu */
-.nav-menu {
-  display: none;
-  background-color: #111;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  padding: 15px;
-  transition: left 0.3s ease-in-out;
-}
-
-.nav-menu.show {
-  left: 0;
-}
-
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.nav-menu ul li {
-  margin: 10px 0;
-}
-
-.nav-menu ul li a {
-  color: white;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 18px;
+  transition: background 0.3s ease;
 }
 
-.nav-menu ul li a:hover {
-  color: #ff6600;
+.hero .btn:hover {
+  background: #ffe600;
+  color: #333;
 }
 
-/* Section Styling */
+/* Sections */
 section {
-  padding: 3rem 1.5rem;
+  padding: 60px 20px;
   max-width: 900px;
   margin: auto;
 }
 
 section h2 {
-  color: #00c2cb;
-  margin-bottom: 1rem;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00acc1;
 }
 
-ul {
-  list-style-type: square;
-  margin-left: 1.5rem;
+section p, section ul {
+  font-size: 18px;
+}
+
+ul li {
+  margin: 10px 0;
 }
 
 /* Media Section */
 .video {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 20px;
 }
 
-.video iframe {
-  width: 100%;
-  max-width: 560px;
-  height: 315px;
-}
-
-/* Fan Art Gallery */
+/* Gallery */
 .gallery {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
 }
 
 .gallery img {
   width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
-  background-color: #00c2cb;
+  background-color: #00bcd4;
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 20px 10px;
+  margin-top: 40px;
 }
