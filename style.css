@@ -13,15 +13,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Toolbar */
-.toolbar {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 #toggleNav {
   background-color: #444;
@@ -171,4 +162,13 @@ footer {
   #toggleNav {
     display: none;
   }
+}
+
+.toolbar {
+  background: linear-gradient(to bottom, #00c2cb, #d9faff);
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
