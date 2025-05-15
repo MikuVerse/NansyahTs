@@ -47,7 +47,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #00bcd4, #0097a7);
+  background-color: #00BCD4;
   color: white;
   text-align: center;
   padding: 80px 20px;
