@@ -51,9 +51,8 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto; /* kalau tombol banyak, bisa scroll horizontal */
+    display: flex;
     justify-content: center;
-  display: flex;
-  gap: 10px;
 }
 
   }
@@ -64,6 +63,7 @@ body {
     white-space: nowrap; /* biar teks nggak kepotong */
     padding: 8px 14px;
   font-size: 14px;
+  border-radius: 20px / 10px;  /* horizontal 20px, vertikal 40px */
   }
 }
 
