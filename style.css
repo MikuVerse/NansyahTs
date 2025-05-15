@@ -51,7 +51,11 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto; /* kalau tombol banyak, bisa scroll horizontal */
-    justify-content: start;
+    justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
   }
 
   .nav-button {
