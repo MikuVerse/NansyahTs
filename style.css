@@ -147,6 +147,4 @@ footer {
     white-space: nowrap; /* biar teks nggak kepotong */
     padding: 8px 14px;
   font-size: 14px;
-  border-radius: 20px / 10px;  /* horizontal 20px, vertikal 40px */
-  }
 }
