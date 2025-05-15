@@ -59,3 +59,44 @@ uploadForm.addEventListener("submit", async (e) => {
     alert("Upload error: " + error.message);
   }
 });
+document.getElementById('uploadForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const fileInput = document.getElementById('fanartImage');
+  const uploaderName = document.getElementById('uploaderName').value.trim();
+
+  if (!fileInput.files[0] || !uploaderName) return alert('Lengkapi semua field!');
+
+  const formData = new FormData();
+  formData.append('file', fileInput.files[0]);
+  formData.append('upload_preset', 'MikuVerse'); // nama upload preset
+  formData.append('folder', 'MikuVerseFolder'); // folder tujuan
+
+  try {
+    const response = await fetch('https://api.cloudinary.com/v1_1/dpl5z2n8h/image/upload', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.secure_url) {
+      const gallery = document.getElementById('fanartGallery');
+      const img = document.createElement('img');
+      img.src = data.secure_url;
+      img.alt = uploaderName;
+      gallery.appendChild(img);
+
+      // reset form
+      fileInput.value = '';
+      document.getElementById('uploaderName').value = '';
+    } else {
+      console.error('Upload gagal:', data);
+      alert('Upload gagal!');
+    }
+  } catch (err) {
+    console.error('Error:', err);
+    alert('Terjadi kesalahan saat upload.');
+  }
+});
+
