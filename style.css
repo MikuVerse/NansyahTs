@@ -11,6 +11,9 @@ body {
   line-height: 1.6;
   background-color: #f2f9ff;
   color: #333;
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+}
+
 }
 
 /* Navigation Bar */
