@@ -59,44 +59,41 @@ uploadForm.addEventListener("submit", async (e) => {
     alert("Upload error: " + error.message);
   }
 });
-document.getElementById('uploadForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
+document.getElementById("uploadForm").addEventListener("submit", async (e) => {
+  e.preventDefault(); // cegah reload form
 
-  const fileInput = document.getElementById('fanartImage');
-  const uploaderName = document.getElementById('uploaderName').value.trim();
+  const imageFile = document.getElementById("fanartImage").files[0];
+  const uploaderName = document.getElementById("uploaderName").value;
 
-  if (!fileInput.files[0] || !uploaderName) return alert('Lengkapi semua field!');
+  if (!imageFile || !uploaderName) {
+    alert("Lengkapi semua field dulu, ya!");
+    return;
+  }
 
   const formData = new FormData();
-  formData.append('file', fileInput.files[0]);
-  formData.append('upload_preset', 'MikuVerse'); // nama upload preset
-  formData.append('folder', 'MikuVerseFolder'); // folder tujuan
+  formData.append("file", imageFile);
+  formData.append("upload_preset", "MikuVerse"); // nama preset
+  formData.append("folder", "MikuVerseFolder"); // nama folder di Cloudinary
+  formData.append("context", `alt=${uploaderName}`); // buat alt text
 
   try {
-    const response = await fetch('https://api.cloudinary.com/v1_1/dpl5z2n8h/image/upload', {
-      method: 'POST',
+    const res = await fetch("https://api.cloudinary.com/v1_1/dwnbhfq4l/image/upload", {
+      method: "POST",
       body: formData
     });
 
-    const data = await response.json();
+    if (!res.ok) throw new Error("Upload gagal");
 
-    if (data.secure_url) {
-      const gallery = document.getElementById('fanartGallery');
-      const img = document.createElement('img');
-      img.src = data.secure_url;
-      img.alt = uploaderName;
-      gallery.appendChild(img);
+    const data = await res.json();
+    alert("Upload berhasil!");
 
-      // reset form
-      fileInput.value = '';
-      document.getElementById('uploaderName').value = '';
-    } else {
-      console.error('Upload gagal:', data);
-      alert('Upload gagal!');
-    }
+    const img = document.createElement("img");
+    img.src = data.secure_url;
+    img.alt = uploaderName;
+
+    document.getElementById("fanartGallery").appendChild(img);
   } catch (err) {
-    console.error('Error:', err);
-    alert('Terjadi kesalahan saat upload.');
+    console.error(err);
+    alert("Upload gagal. Coba lagi ya!");
   }
 });
-
