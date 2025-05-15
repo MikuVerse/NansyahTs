@@ -48,15 +48,21 @@ body {
 /* Responsif biar mobile friendly */
 @media (max-width: 768px) {
   .nav-left {
-    flex-direction: row-reverse;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* kalau tombol banyak, bisa scroll horizontal */
+    justify-content: start;
   }
 
   .nav-button {
-    width: 40%;
-    text-align: center;
+    flex: 0 0 auto; /* biar gak dipaksa mengecil */
+    width: auto;
+    white-space: nowrap; /* biar teks nggak kepotong */
+    padding: 8px 14px;
+  font-size: 14px;
   }
 }
+
 
 /* Hero Section */
 .hero {
