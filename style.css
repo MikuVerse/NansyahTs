@@ -45,29 +45,6 @@ body {
   color: white;
 }
 
-/* Responsif biar mobile friendly */
-@media (max-width: 768px) {
-  .nav-left {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* kalau tombol banyak, bisa scroll horizontal */
-    display: flex;
-    justify-content: center;
-}
-
-  }
-
-  .nav-button {
-    flex: 0 0 auto; /* biar gak dipaksa mengecil */
-    width: auto;
-    white-space: nowrap; /* biar teks nggak kepotong */
-    padding: 8px 14px;
-  font-size: 14px;
-  border-radius: 20px / 10px;  /* horizontal 20px, vertikal 40px */
-  }
-}
-
-
 /* Hero Section */
 .hero {
   background: linear-gradient(to right, #00bcd4, #0097a7);
@@ -152,4 +129,24 @@ footer {
   text-align: center;
   padding: 20px 10px;
   margin-top: 40px;
+}
+/* Responsif biar mobile friendly */
+@media (max-width: 768px) {
+  .nav-left {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* kalau tombol banyak, bisa scroll horizontal */
+    display: flex;
+    justify-content: center;
+}
+
+}
+  .nav-button {
+    flex: 0 0 auto; /* biar gak dipaksa mengecil */
+    width: auto;
+    white-space: nowrap; /* biar teks nggak kepotong */
+    padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 20px / 10px;  /* horizontal 20px, vertikal 40px */
+  }
 }
