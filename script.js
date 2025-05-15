@@ -1,5 +1,5 @@
-const cloudName = "de4wim22n"; // Cloudinary cloud name lo
-const unsignedUploadPreset = "MikuVerse"; // Upload preset lo yang udah di-set di Cloudinary
+const cloudName = "de4wim22n";
+const unsignedUploadPreset = "MikuVerse";
 
 const uploadForm = document.getElementById("uploadForm");
 const fanartImage = document.getElementById("fanartImage");
