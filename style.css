@@ -31,11 +31,10 @@ body {
 
 .nav-button {
   background-color: white;
-  display: inline-block;
   color: #00BCD4;
   text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 3px;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: 0.3s ease;
@@ -49,12 +48,12 @@ body {
 /* Responsif biar mobile friendly */
 @media (max-width: 768px) {
   .nav-left {
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
   }
 
   .nav-button {
-    width: 25%;
+    width: 40%;
     text-align: center;
   }
 }
@@ -68,7 +67,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 48px;
   margin-bottom: 16px;
 }
 
