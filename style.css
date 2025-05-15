@@ -1,3 +1,4 @@
+
 /* Reset dasar */
 * {
   margin: 0;
@@ -148,3 +149,10 @@ footer {
     padding: 8px 14px;
   font-size: 14px;
 }
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
