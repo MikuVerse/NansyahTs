@@ -53,14 +53,27 @@
   </section>
 
   <!-- Fan Art -->
-  <section id="fanart">
-    <h2>Fan Art Gallery</h2>
-    <div class="gallery">
-      <img src="images/miku.jpg" alt="Fan Art 1" />
-      <img src="images/miku.jpg" alt="Fan Art 2" />
-      <img src="images/miku.jpg" alt="Fan Art 3" />
-    </div>
-  </section>
+<section id="fanart">
+  <h2>Fan Art Gallery</h2>
+  
+  <!-- Upload Form -->
+  <div class="upload-area">
+    <h3>Upload Your Fan Art</h3>
+    <form id="uploadForm">
+      <input type="file" id="fanartImage" accept="image/*" required />
+      <input type="text" id="uploaderName" placeholder="Your Name" required />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery" id="fanartGallery">
+    <img src="images/miku.jpg" alt="Fan Art 1" />
+    <img src="images/miku.jpg" alt="Fan Art 2" />
+    <img src="images/miku.jpg" alt="Fan Art 3" />
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
