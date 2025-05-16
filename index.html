@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MikuVerse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="#about" class="nav-button">About</a>
+    <a href="#songs" class="nav-button">Songs</a>
+    <a href="#media" class="nav-button">Media</a>
+    <a href="#fanart" class="nav-button">FanArt</a>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>MikuVerse</h1>
+    <p>The Virtual Diva Who Changed the World</p>
+    <a href="#about" class="btn">Learn More</a>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Hatsune Miku</h2>
+    <p>Hatsune Miku adalah penyanyi virtual berbasis Vocaloid dari Crypton Future Media...</p>
+  </section>
+
+  <!-- Top Songs -->
+  <section id="songs">
+    <h2>Top Songs</h2>
+    <ul>
+      <li>World is Mine</li>
+      <li>Senbonzakura</li>
+      <li>Tell Your World</li>
+      <li>Rolling Girl</li>
+      <li>Hello Sekai</li>
+    </ul>
+  </section>
+
+  <!-- Media -->
+  <section id="media">
+    <h2>Media</h2>
+    <p>Cuplikan konser, trailer kolaborasi, dan video musik terbaik Miku!</p>
+    <div class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/t5U0rrj0dio" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Fan Art -->
+<section id="fanart">
+  <h2>Fan Art Gallery</h2>
+  
+  <!-- Upload Form -->
+  <div class="upload-area">
+    <h3>Upload Your Fan Art</h3>
+   <form id="uploadForm">
+  <input type="file" id="fanartImage" accept="image/*" required />
+  <input type="text" id="uploaderName" placeholder="Your Name" required />
+  <button type="submit">Upload</button>
+   </form>
+
+  <!-- Gallery -->
+  <div class="gallery" id="fanartGallery">
+    <!-- Contoh gambar default -->
+    <img src="images/miku.jpg" alt="Fan Art 1" />
+    <img src="images/miku.jpg" alt="Fan Art 2" />
+    <img src="images/miku.jpg" alt="Fan Art 3" />
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="social-icons">
+    <a href="#" target="_blank">
+      <img src="images/ig.jpeg" alt="Instagram Icon" class="icon" />
+    </a>
+    <a href="#">
+      <img src="images/gmail.png" alt="Email Icon" class="icon" />
+    </a>
+  </div>
+  <p class="copyright">© 2025 MikuVerse by Nansyah</p>
+</footer>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
